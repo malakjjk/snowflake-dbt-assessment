@@ -16,16 +16,16 @@ This repository contains a dbt project that demonstrates building and testing mo
 ```bash
 git clone https://github.com/<your-username>/snowflake-dbt-assessment.git
 cd snowflake-dbt-assessment
-
+```
 ### 2. Create and Activate the virtual environment (optional)
 ```bash
 python -m venv venv
 source venv/bin/activate 
-
+```
 ### 3. Install dbt for Snowflake
 ```bash
 pip install dbt-snowflake
-
+```
 ### 4. Configure Snowflake profile
 Create or edit the profiles.yml file (usually located at ~/.dbt/profiles.yml) and add:
 ```yaml
@@ -41,23 +41,23 @@ my_new_project:
       database: DEV_DB #(to be created on snowflake)
       warehouse: DEV_WH #(to be created on snowflake)
       schema: DBT_DEMO
-
+```
 
 ## Running the Project
 
 ### Build models
 ```bash
 dbt run
-
+```
 ### Run tests
 ```bash
 dbt test
-
+```
 ### Generate documentation
 ```bash
 dbt docs generate
 dbt docs serve
-
+```
 ## Model Descriptions
 
 ### 1. stg_orders
