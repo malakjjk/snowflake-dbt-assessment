@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: stg_orders
+    description: "Staging model for orders joined with customers"
+    columns:
+      - name: o_orderkey
+        description: "Primary key for orders"
+        tests:
+          - not_null
+          - unique
+    
+  - name: customer_revenue
+    description: "total revenue for customers joined with orders"
+    columns:
+      - name: c_custkey
+        description: "Primary key for customers"
+        tests:
+          - not_null
+          - unique
